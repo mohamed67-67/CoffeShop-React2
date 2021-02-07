@@ -1,0 +1,280 @@
+
+@mixin mqFooter {
+        
+    @media only screen and (max-width: 860px) {
+        .footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(75px,1fr));
+            background-color: #1f3933;
+            margin:  auto;
+            
+        }
+        
+        .first {
+            display: flex;
+            flex-direction: column;
+            padding: 0px 5% 0px;
+            background-color: #1f3933;
+            border-radius: 20px 0px 0px 0px;
+            margin: 0px 0px 0px 3%;
+            grid-gap: 0px ;
+
+            img {
+                width: 60px !important;
+                object-fit: cover;
+            }
+        }
+        
+        .footer .first span img:last-of-type {
+            width: 20px !important;
+            animation: swing 1s linear infinite alternate both;
+        }
+        
+        .footer h3 {
+
+        font-size: 1.5rem;
+        color: #9b713d;
+        font-weight: 500;
+        padding: 5% 0px;
+
+        }
+        
+        .footer h5 {
+            color: #9b713d;
+            font-size: 1rem;
+        }
+        
+        .second {
+            background-color: #1f3933;
+            display: flex;
+            flex-direction: column;
+            padding-top: 5%;
+            color: #9b713d;
+        }
+        
+        .second p{
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+        
+        .second .fas {
+            font-size: 1rem;
+        }
+        
+        .third {
+            display: flex;
+            flex-direction: column;
+            background-color: #1f3933;
+            border-radius: 0px 15px 0px 0px;
+            margin: 0px 3% 0px 0px;
+        }
+        
+        .socials {
+            display: flex;
+            flex-direction: row;
+            color: #9b713d;
+            align-items: center;
+            justify-content: center;
+            background-color: #1f3933;
+        }
+        
+        .third h5 {
+            padding:  20% 0px 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 5%;
+        }
+        
+        .third .fab {
+            padding-left: 3%;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .im {
+            display: none;
+        }
+        
+    }
+
+    @media only screen and (max-width:500px) {
+        
+        
+        .footer{
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: #1f3933;
+            margin:  auto;
+        
+            .first {
+                display: flex;
+                flex-direction: row;
+                background-color: #1f3933;
+                border-radius: 20px 20px 0px 0px;
+                margin: 0px 3% 0px 3%;
+                grid-gap: 0px ;
+
+                img {
+                    width: 60px !important;
+                    object-fit: cover;
+                }
+                span img:last-of-type {
+                    width: 20px !important;
+                    animation: swing 1s linear infinite alternate both;
+                    padding-right: 3%;
+                }
+            }
+            h3 {
+            
+                font-size: 1.3rem;
+                color: #9b713d;
+                font-weight: 500;
+                margin-top: 6%;
+                padding: 0px 8%;
+            }
+            h5 {
+                color: #9b713d;
+                font-size: 0.9rem;
+                margin-top: 8%;
+                padding-left: 3%;
+            
+            }
+            .second {
+                background-color: #1f3933;
+                display: flex;
+                flex-direction: column;
+                color: #9b713d;
+                margin: 0px 3%;
+                text-align: center;
+                p{
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                }
+                .fas {
+                    font-size: 1rem;
+                }
+            }
+            .socials {
+                display: flex;
+                flex-direction: row;
+                color: #9b713d;
+                align-items: center;
+                justify-content: center;
+                background-color: #1f3933;
+            }
+            .third {
+                display: flex;
+                flex-direction: row;
+                background-color: #1f3933;
+                border-radius: 0px 15px 0px 0px;
+                margin: 0px auto;
+            }
+        }
+        
+            
+    }
+}
+                 //Hero media Query//
+@mixin mqhero {
+        
+    @media only screen and (max-width: 1050px){
+        
+        .hero {
+            margin-top: 2%;
+            .container {
+                margin-top: 2rem;
+                padding-right: 0px;
+                img {
+                   position: absolute;
+                   top: 100px;
+                   right: 80px;
+                   width: 50%;
+                   margin-top: 4%;
+               }
+            }
+            .circle {
+                width: 100%;
+                height: 100%;
+                background-color:#9b713d;
+                clip-path: circle(550px at right 650px);
+                margin-top: 10%;
+            }
+        }    
+        
+    }
+        
+    @media only screen and (max-width: 700px) {
+       
+        .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 5rem;
+        .container {
+            display: none;
+        }
+        .circle {
+            display: none;
+        }
+        .heading{
+            text-align: center;
+            margin-top: -5%;
+        }
+        }
+    }
+
+    @media  only screen  and (max-width:550px) {
+        
+        .hero{
+            .heading{
+                .text{
+
+                    h1{
+                        margin: 35% 30% 7%;
+                        font-size: 5rem;
+                    }
+                }
+                h5{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@mixin aboutmq {
+
+    @media only screen and (max-width: 760px){
+        .text{
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+    @media only screen and  (max-width: 500px){
+        
+        h2{
+            font-size: 1.5rem;
+        }
+        
+    }
+}
+
+@mixin cardmq {
+    @media screen and (max-width: 550px) {
+        .card{
+            width:60%;
+            
+        }
+    }
+    
+    @media screen and (max-width: 350px) {
+        .card{
+            width:90%;
+           
+        }
+    }
+
+}

@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import 'mixins';
+@import 'MQ';
+
+body{
+    background-color:#1f3933 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+video {
+    outline-style: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#1f3933,#ddbbc6) ;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+////// navbar ////////
+
+.navbar {
+    margin-bottom: 2rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    .navbar-nav {
+        padding: 0px 0rem;
+        margin-top: 0px;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    a.nav-link {
+        color:  #5a4851;
+        cursor: pointer;
+    }
+    
+    img {
+        
+        transition: 1s;
+        outline: white;
+        color: white;
+    }
+}
+
+///////Hero Section//////
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    margin-bottom: 5rem;
+
+    .container {
+        margin-top: 2rem;
+        padding-right: 0px;
+    }
+
+    .container img {
+        position: absolute;
+        top: 100px;
+        right: 150px;
+        width: 500px;
+    }
+
+    .circle {
+        width: 100%;
+        height: 100%;
+        background-color:#9b713d;
+        clip-path: circle(550px at right 650px);
+        margin-top: 7%;
+    }
+    
+    .heading {
+        color: #deb685;
+        text-align: center;
+
+        .text 
+            h1 {
+                margin: 15% 30% 7%;
+                display: flex;
+                justify-content: center;
+                font-size: 6rem;
+                font-weight: 500;
+
+                
+            }
+            h5 {
+                text-transform: uppercase;
+                font-weight: 600;
+
+                span img {
+                    width: 30px;
+                    transform: rotate(20deg);
+                    animation: swing 2s linear infinite alternate both;
+                }
+        }
+    }
+    
+}
+@include mqhero();
+
+@keyframes swing {
+    from { transform: rotate(20deg);}
+
+    to { transform: rotate(-20deg);}
+}
+
+////////// About us/
+
+.about {
+    background-color:#9b713d;
+    margin-top: -50px;
+    border-radius: 20px 0px 0px 20px;
+    width: 97%;
+    margin-left: auto;
+    padding-bottom: 2%;
+
+    h2 {
+        width: fit-content;
+        text-align: center;
+        background-color: #9b713d;
+        font-weight: 700;
+        border-radius: 50%;
+        padding: 10px;
+        position: relative;
+        top: -20px;
+        left: 40%;
+        color: #1f3933;
+    }
+    
+    .contain {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px,1fr) );
+        width: 95%;
+        margin: auto;
+        grid-gap: 2%;
+        
+        .video video {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            
+        }
+    }
+
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .text p {
+        color: #1f3933;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .aboutbtn{
+        width: fit-content;
+        border: none;
+        background-color: #1f3933;
+        &:hover{
+            background-color: #5a4851;
+        }
+    }
+
+    @include aboutmq();
+}
+
+//////Contact us/
+
+
+.contact-us {
+    // background-color: #9b713d;
+    background-image: url(../photos/European-Specialty-Coffee-Market-by-Pointbleu-Design-Blog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    width: 95%;
+    margin: 5rem auto 0;
+    border-radius: 20px;
+    
+    h3 {
+        color: #ddbbc6;
+        font-weight: 600;
+        padding: 10px 0px;
+    }
+    
+   
+
+    .card {
+        width: 40%;
+        margin: auto;
+        background-color: #1f3933;
+        justify-content: space-around;
+
+        
+        p {
+            color: #ddbbc6;
+        }
+    }
+    @include cardmq();
+    
+    
+}
+
+//////////Footer/
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    // background-color: #9b713d;
+    border-radius: 5px;
+    margin:  5rem auto 0;
+    
+    .first {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 5% 0px;
+        background-color: #1f3933;
+        border-radius: 20px 0px 0px 0px;
+        margin: 0px 0px 0px 3%;
+        grid-gap: 0px ;
+
+        img {
+            width: 60px !important;
+            object-fit: cover;
+        }
+
+        span img:last-of-type {
+            width: 25px !important;
+            animation: swing 1s linear infinite alternate both;
+        }
+    }
+    h3 {
+        color: #9b713d;
+        font-weight: 600;
+        padding: 2% 0px;
+    }
+    h5 {
+        color: #9b713d;
+    }
+    
+    .second {
+        background-color: #1f3933;
+        display: flex;
+        flex-direction: column;
+        padding-top: 8%;
+        color: #9b713d;
+        
+        p{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .fas {
+            font-size: 1.2rem;
+        }
+    }
+    
+    .third {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+        background-color: #1f3933;
+        border-radius: 0px 15px 0px 0px;
+        margin: 0px 3% 0px 0px;
+        
+        h5 {
+            padding: 10% 0px;
+            font-weight: 600;
+        }
+        .fab {
+            padding-bottom: 10%;
+            padding-left: 25px;
+            font-size: 1.5rem;
+        }
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .socials {
+        display: flex;
+        flex-direction: column;
+        color: #9b713d;
+        .fab {
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        
+        .fab:hover{
+            color: rgb(99, 99, 235);
+        }
+    }
+    .im {
+        position: relative;
+        
+        img {
+            width: 180px !important;
+            position: absolute;
+            bottom: 40px;
+            right: 25%;
+        }
+    }
+}
+@include mqFooter();
+/////////////////////////////////////////////////////////
+.heading{
+    text-align: center;
+    margin:13% 0px 5%;
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    color: #deb685;
+}
+.menu{
+    padding: 20px 0px;
+    width: 98%;
+    height: 700px;
+    background-color: #9b713d;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    "cat goods"
+    ;
+}
+
+.categories{
+    text-align: center;
+    text-align: center;
+    grid-area: "cat";
+    
+    p{
+        margin-bottom: 30px;
+        font-size: 25px;
+        font-weight: 500;
+        width: fit-content;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    h5{
+        margin-bottom: 30px;
+        font-size: 25px;
+        font-weight: 500;
+        width: fit-content;
+        font-weight: 700;
+    }
+    
+    .ty{
+        margin-top: 135px;
+        color: #1f3933;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.goods{
+    overflow: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-area: "goods";
+
+    img{
+        width: 50%;
+        border-radius: 50%;
+    }
+   
+    
+    .item{
+        margin: 20px auto;
+        color: #1f3933;
+        h5{
+            font-weight: 700;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+}
+
+@include menu();
+
+.active{
+    background-color: #1f3933;
+    border-radius: 5px;
+    padding: 0px 5px;
+    color: #ddbbc6;
+}
+
+#arrow{
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    font-size: 4rem;
+    color: wheat;
+    opacity: 0;
+    transition: 1s;
+    z-index: 5;
+    &:hover{
+        cursor: pointer;
+    }
+}
+/////////////////////////////Pop up feedBack///////////
+
+.pop-ups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    opacity: 0;
+    position:fixed;
+    height: 90%;
+    width: 90%;
+    left: 5%;
+    top: -2000px;
+    background-color: #1f3933;
+    background-image: url(../photos/Simple-wallpaper-with-coffee-beans-vector-PNG.png);
+    background-size: cover;
+    z-index: 2000;
+    text-align: center;
+    grid-gap: 15px;
+    padding: 30px;
+    border-radius: 15px;
+    overflow-y: scroll;
+    transition: ease;
+}
+
+
+.appear {
+    animation: appear 1s ease  both;
+}
+
+.disappear {
+    animation: disappear 1s ease  both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        top: -2000px;
+    }
+
+    to {
+        opacity: 1;
+        top: 3%;
+    }
+}
+@keyframes disappear {
+    from {
+        opacity: 1;
+        top: 3%;
+    }
+
+    to {
+        opacity: 0;
+        top: -2000px;
+    }
+}
+
+
+.close {
+    left: 7%;
+    top: 5%;
+    position: fixed;
+    font-size: 20px;
+    cursor: pointer;
+    color: royalblue;
+    transition: ease;
+}
+
+.form-label{
+    color:complement($color: white);
+    font-weight: 500;
+}
+////////////Trend Products//////
+
+.trend{
+    background-color: #9b713d;
+    width: 95%;
+    border-radius: 15px;
+    margin: 3rem auto;
+    h5{
+        text-align: center;
+        color: #ddbbc6;
+        font-size: 2.5rem;
+        padding: 10px;
+        @media only screen and (max-width:450px){
+            font-size: 1.5rem;
+        }
+    }
+    .trendpro{
+        display: flex;
+        justify-content: center;
+        p{
+            padding: 10px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            &:hover{
+                cursor: pointer;
+            }
+            @media only screen and (max-width: 650px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    
+    .hote{
+        display: block;
+        @include trned();
+    }
+    .colde{
+        display: none;
+        @include trned();
+    }
+    .bakerye{
+        display: none;
+        @include trned();
+    }
+    .beanse{
+        display: none;
+        @include trned();
+    }
+}
+
+.trendactive{
+    background-color: #1f3933;
+    color: #ddbbc6;
+    border-radius: 5px;
+}
